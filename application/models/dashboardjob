@@ -1,0 +1,129 @@
+<?php
+/**
+ * Created by JetBrains PhpStorm.
+ * User: Moses Esan
+ * Date: 26/08/13
+ * Time: 15:57
+ * To change this template use File | Settings | File Templates.
+ */
+
+require_once 'application/config/utils.inc.php';
+require_once("application/config/db_oci8.inc");
+require_once 'application/config/arithon_config.php';
+
+class Dashboard_model extends CI_Model
+{
+    public function __construct()
+    {
+        $this->load->library('db_object');
+        //$this->load->model('comments_model');
+    }
+
+
+    function show_databases()
+    {
+        $q = "SELECT DISTINCT REVERSE(LEFT(REVERSE(email),LOCATE('@',REVERSE(email)) - 1)) AS client, db_username, db_password, connect_string FROM arithon_users where `Administrator`='1' AND `CancelDate`='0' and `username` NOT LIKE 'master%' ORDER BY client";
+
+        $clients = runquery($q);
+        $result = $clients["ResultID"];
+
+
+        while ($clients["client"])
+        {
+            $db_username = $clients["db_username"];
+            $db_password = $clients["db_password"];
+            $connect_string = $clients["connect_string"];
+            $clients = mysql_fetch_array($result);
+
+            if ($db_username === "arithon_7448")
+                $allJobs = $this->get_feed($db_username, $db_password, $connect_string);
+        }
+
+        return $allJobs;
+    }
+
+    function get_feed($db_username, $db_password, $connect_string)
+    {
+        $allJobs = array();
+        $total = 0;
+        $db = new db_object;
+        $db->User = $db_username;
+        $db->Password = $db_password;
+        $db->Database = $connect_string;
+
+
+        $oracle_query = "SELECT clntinfo.company, jobs.user_id, jobs.jobs_id, jobs.title, jobs.status, jobs.location, jobs.location2, jobs.location3, jobs.salary, jobs.salaryhigh, jobs.department, jobs.sector, jobs.type, jobs.jobs_custom1, jobs.jobs_custom2, to_char(jobs.updated,'DY, DD MON YYYY HH24:MI:SS') as updated, comments.com, jobs.desc_internal
+                         FROM jobs, comments, clntinfo
+                         WHERE jobs.status = 'Open' AND jobs.title is not null AND comments.type = 'WEBSITE' AND LENGTH(comments.com) > 0 AND comments.jobs_id = jobs.jobs_id AND clntinfo.clnt_id = jobs.clnt_id";
+
+        //added to limit to one row return per job
+        $oracle_query .= " and comments.comment_id in (select max(comment_id)from comments where type = 'WEBSITE' group by jobs_id)";
+
+        $oracle_query .= " order by jobs.updated desc";
+
+
+        $db->query($oracle_query);
+
+        while ($db->next_record())
+        {
+            $jobtitle = preg_replace("/[^A-Za-z0-9\s\s+\.\:\-\/%+\*\&\$\#\!\@\(\)]/","",$db->f('title'));
+            $user_id = $db->f('user_id');
+            $company = $db->f('company');
+            $sector = $db->f('sector');
+
+
+            $description = strip_tags(trim($db->f('com')));
+            $description = substr( $description , 0 , 208);
+            if (strlen(trim($db->f('com'))) > 208 ) $description .= '...';
+
+            $location = $db->f('location');
+            $salary = $db->f('salary');
+            $salaryhigh = $db->f('salaryhigh');
+
+            if (strlen($salary) > 0 && $salary != 0)
+            {
+                if (strlen($salaryhigh) > 1) $salary = $salary.' - '.$salaryhigh;
+            }elseif (strlen($salary) < 1 || $salary = 0)
+            {
+                if (strlen($salaryhigh) > 1)
+                {
+                    $salary = $salaryhigh;
+                }else{
+                    $salary = "Salary Not Available";
+                }
+
+            }
+
+           // $linkedInProfile = $this->checkLinkedIn($user_id);
+
+            $allJobs[] = array(
+                'jobTitle' => $jobtitle, 'company' => $company, 'sector' => $sector,
+                'location' => $location,'salary' => $salary,
+                'description' => $description,
+               // 'linkedin' => $linkedInProfile
+            );
+
+            $total++;
+        }
+
+        return array($total, $allJobs);
+    }
+
+    function checkLinkedIn($user_id)
+    {
+        $sql_query = "SELECT * FROM arithon_users WHERE username = '".$user_id."'";
+        $arithonUser = runquery($sql_query);
+
+        $linkedInProfile ="";
+
+        if (strlen($arithonUser["LinkedInProfile"]) > 5 )
+        {
+            $linkedInProfile .= '<script type="text/javascript" src="http://platform.linkedin.com/in.js" >api_key: wx97ca1mr3m3</script>';
+
+            $linkedInProfile .= '<script type="IN/MemberProfile" data-id="'.$arithonUser["LinkedInProfile"].'" data-format="inline" data-related="false"></script>';
+
+        }
+
+        return $linkedInProfile;
+    }
+}

@@ -1,0 +1,1713 @@
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small,  sub, sup, var, b, i, dl, dt, dd, fieldset, form, label, legend, caption, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+
+body
+{
+    ms-touch-action: none!important;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    font-family: 'Lucida Grande',Arial,sans-serif;
+    color: #333;
+    background-color: #ecebe8;
+    overflow: hidden;
+}
+
+a {
+    color: #ffffff;
+    font-size: 12pt;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    font-size: 30px;
+    color: #373737;
+    font-weight: bold;
+}
+
+ul, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#header
+{
+    height: 70px;
+    width: 100%;
+    min-width: 1080px;
+    background-image: url("../images/bg.PNG");
+    overflow: hidden;    
+}
+
+#header #logo
+{
+    display: block;
+    float: left;
+    width: 342px;
+    height: 100%;
+    background: url("../images/logo.PNG") no-repeat scroll left center transparent;
+    margin-left: 10px;
+}
+
+#header #header-right
+{
+    float: right;
+    margin-top: 18px;
+    display: block;
+    margin-right: 10px;
+}
+
+#header #register
+{
+    padding: 0;
+    text-transform: uppercase;
+    text-align: left;
+    color: #ffffff;
+    line-height: 30px;
+    font-size: 12px;
+    padding-left: 10px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+}
+
+#header #btn-register:hover
+{
+    text-decoration: underline;
+}
+
+#header .log-in-btn
+{
+    padding: 4px 24px;
+    vertical-align: baseline;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    font-weight: normal;
+    cursor: pointer;
+    zoom: 1;
+    display: inline-block;
+    position: relative;
+    text-transform: uppercase;
+    line-height: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: #262626;
+    color: #fc0;
+}
+
+#footer {
+    width: 100%;
+    height: 44px;
+    background-color: #1a1a1a;    
+    float: left;
+    position: relative;
+}
+
+#footer .copyright-wrapper {
+     width: 352px;
+     height: 100%;
+}
+
+#footer .copyright-wrapper #copyright {
+     background: url("../images/copyright.png") no-repeat scroll 0 0 transparent;
+     width: 76px;
+     height: 47px;
+     display: block;
+     position: absolute;
+     left: 35px;
+     bottom: 10px;
+}
+
+#footer .footer-wrapper {
+    border-left: 1px solid #ffffff;
+    position: absolute;
+    left: 352px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.social-wrapper {
+    float: left;
+    margin-left: 75px;
+    margin-right: 160px;
+}
+
+.social {
+    display: block;
+    cursor: pointer;   
+    float: left;
+    margin-right: 25px; 
+}
+
+.facebook {
+    background: url("../images/facebook.png") no-repeat scroll center center #1a1a1a;
+    width: 12px;
+    height: 44px;
+}
+
+.twitter {
+    background: url("../images/twitter.png") no-repeat scroll center center #1a1a1a;
+    width: 22px;
+    height: 44px;
+}
+
+.google {
+    background: url("../images/google.png") no-repeat scroll center center #1a1a1a;
+    width: 20px;
+    height: 44px;
+}
+
+.apply-for-job {
+    color: #ffcc00;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 44px;
+    float: left;
+    cursor: pointer;
+}
+
+
+#search-box
+{
+    background-color: #414041;
+    height: 163px;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+#search-box h1
+{
+    color: #fc0;
+    text-transform: uppercase;
+    line-height: 22px;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 11px;
+}
+
+#search-box #input-fields
+{
+    width: 100%;
+    float: left;
+}
+
+#search-box section
+{
+    margin-bottom: 5px;
+    width: 274px;
+    float: left;
+    display: block;
+}
+
+#search-box section.keyword
+{
+    width: 296px;
+}
+
+#search-box section.keyword input
+{
+    width: 234px;
+}
+
+#search-box label
+{
+    color: #cccccc;
+    line-height: 30px;
+    font-size: 11px;
+    font-weight: bold;
+    text-align: right;
+    display: block;
+    float: left;
+    width:52px;
+    margin-right: 9px;
+}
+
+#search-box input[type="text"]
+{
+    width: 213px;
+    height: 30px;
+    background-color: #303030 ;
+    border: 1px solid #2c2c2d;
+    padding: 10px;
+
+    color: #ffffff;
+    -moz-box-shadow: inset 0 0 1px #f2f2f2;
+    -webkit-box-shadow: inset 0 0 1px #c1c1c1 ;
+    box-shadow:         inset 0 0 1px #c1c1c1 ;
+    outline: 0;
+    padding-right: 24PX;
+}
+
+
+#search-box .chosen-container
+{
+    width: 211px !important;
+    float: left;
+}
+
+.chosen-search input[type="text"]
+{
+    margin-bottom: 10px !important;
+    margin-top: -30px;
+    border-radius: 0 !important;
+    width: 218px !important;
+}
+
+.chosen-container-single .chosen-single
+{
+    width: 213px !important;
+    height: 30px;
+    background-color: #303030 ;
+    border: 1px solid #2c2c2d;
+    padding: 10px;
+
+    color: #ffffff;
+    -moz-box-shadow: inset 0 0 1px #f2f2f2;
+    -webkit-box-shadow: inset 0 0 1px #c1c1c1 ;
+    box-shadow:         inset 0 0 1px #c1c1c1 ;
+    outline: 0;
+    padding-right: 24PX;
+}
+
+
+#search-box p
+{
+    color: #fc0;
+    line-height: 22px;
+    font-size: 11px;
+    font-weight: bold;
+    margin-left: 61px;
+    margin-top: -1px;
+    display: block;
+    float: left;
+}
+
+
+#search-box #search-button
+{
+    margin-top: -21px;
+    display: block;
+    float: left;
+    border-radius: 100%;
+    margin-left: -14px;
+    background-color: #414041;
+    width: 41px;
+    height: 43px;
+    position: absolute;
+    left: 291;
+    top: 86;
+}
+
+#search-box #search-button input
+{
+    width: 36px;
+    height: 36px;
+    border-radius: 100%;
+    background-color: #fc0 ;
+    border: 4px solid #2c2c2d;
+    margin-left: 10px;
+    margin-top: 5px;
+    background-image: url("../images/arrow-11-24.ico");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20px 24px;
+    cursor: pointer;
+}
+
+#search-result
+{
+    /*background-color: #1a1a1a;
+    height: 100%;*/
+}
+
+#search-result h1
+{
+    padding: 5px 5px 5px 18px;
+    text-transform: uppercase;
+    text-align: left;
+    color: #fff;
+    line-height: 22px;
+    font-size: 11px;
+    color: #fc0;
+    background: #2c2c2d;
+}
+
+#search-result h1 img
+{
+    margin-bottom: -4px;
+    margin-right: 2px;
+}
+
+#search-result section#all-result
+{
+    display: block;
+    height: 70%;
+    overflow: auto;
+}
+
+#search-result .result-box
+{
+    border-bottom: 1px solid #414041;;
+    display: block;
+    overflow: hidden;    
+    padding: 10px 0px 15px 18px;
+    width: 100%;
+}
+
+#search-result .result-box p.title
+{
+    color: #cccccc;
+    line-height: 28px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 90%;
+}
+
+#search-result .result-box p.title:hover,
+#search-result .result-box p.company:hover
+{
+    text-decoration: underline;
+}
+
+#search-result .result-box p.company
+{
+    color: #fff;
+    line-height: 11px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 90%;
+}
+
+#search-result .result-box p.summary
+{
+    color: #ccc;
+    line-height: 17px;
+    font-size: 12px;
+    cursor: pointer;
+    margin-top: 5px;
+    word-wrap: break-word;
+    width: 90%;
+}
+
+#search-result .result-box p.location
+{
+    color: #ffe066;
+    line-height: 11px;
+    font-size: 12px;
+    cursor: pointer;
+    margin-top: 5px;
+    width: 90%;
+}
+
+.selected-job
+{
+    background-color: #fc0 !important;
+    position: relative;
+}
+
+#search-result .selected-job
+{
+    border-right: 1px solid #fc0;
+}
+
+.selected-job p.title,
+.selected-job p.summary
+{
+    color: #414041 !important;
+}
+
+.selected-job p.location
+{
+    color: #333333 !important;
+    font-weight: bold !important;
+}
+
+#search-result .selected-job:after
+{
+    left: 87%;
+    border: solid transparent;
+    content: "";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(136, 183, 213, 0);
+    border-left-color: #ecebe8;
+    border-width: 23px;
+    top: 37%;
+    margin-right: -10px;
+
+    transform:rotate(-179deg);
+    -ms-transform:rotate(-179deg); /* IE 9 */
+    -webkit-transform:rotate(-179deg); /* Safari and Chrome */
+}
+
+
+#wrapper
+{
+    background-color: #1a1a1a;
+    height: 817px;
+    width: 100%;    
+    min-height: 670px;
+    min-width: 1080px;
+    overflow: hidden;
+    float: left;
+    position: relative;
+}
+
+#search-wrapper {
+    user-select: none;
+    -moz-user-select: -moz-none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    width: 352px;
+    background: #1a1a1a;    
+    text-align: left;
+    vertical-align: top;
+    height: 100%;
+    float: left;
+    position: relative;
+}
+
+#main
+{
+    right: 281px;
+    background-image: none;
+    position: absolute;
+    left: 352px;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+    -ms-transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.page_wrapper
+{
+    margin-left: auto;
+    height: 100%;
+    overflow: auto;
+    position:absolute;
+    right: 0;
+    background-color: #ffffff;
+}
+
+#dashboard-wrapper
+{
+    width: 100%;
+    z-index:auto;
+    overflow-y: scroll !important;
+}
+
+#dashboard-wrapper .overlay
+{
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.25);
+}
+
+#job-info-wrapper
+{
+    max-width: 66%;
+    z-index:1;
+    display: none;
+    border-left:1px solid #666666 ;
+    padding-left: 70px;
+    padding-right: 75px;
+}
+
+#job-info-wrapper .overlay
+{
+    display: none;
+    position: absolute;
+    bottom: 0;
+    background-image: url("../images/ajax-loader.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    left: 34%;
+    top: 270px;
+    height: 176px;
+}
+
+#job-info-wrapper .overlay p
+{
+    color: #414041;
+    line-height: 300px;
+    font-family: 'Lucida Grande', Tahoma, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 7px;
+}
+
+/*************** Home page style start *******************/
+#home-header-right {
+    margin-left: 180px;
+    margin-top: 23px;
+}   
+
+#login-link {
+    line-height: 21px;
+}
+
+.login-input-field {
+    width: 150px;
+    height: 21px;
+    background-color: #ffcc00;
+    text-align: center;
+    color: #1a1a1a;
+    border: none;
+    border-radius: 10px;
+    margin-left: 12px;
+} 
+
+#home-main {    
+    position: absolute;
+    left: 352px;
+    right: 295px;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+    background-color: #ffcc00;
+    color: #1a1a1a;    
+}
+
+#home-wrapper {
+    width: 100%;
+    z-index:auto;    
+    background: url("../images/register-bg-img.png") no-repeat scroll 0 0 transparent;
+    background-size: 100%;
+}
+
+#home-wrapper .logo-large {
+    width: 394px;
+    height: 88px;
+    display: block;
+    background: url("../images/logo-large.png") no-repeat scroll 0 0 transparent;
+    position: absolute;
+    left: 12px;
+    bottom: 12px;
+}
+
+#home-wrapper .overlay
+{
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.25);
+}
+
+#home-wrapper section {
+    width: 100%;
+    float: left;
+}
+
+#home-wrapper .content {
+    padding: 20px;
+}
+
+#home-wrapper .content h1 {
+    font-size: 30px;
+    color: #1a1a1a;
+    font-weight: bold;
+}
+
+#home-wrapper .content .register-content {
+    margin-top: 50px;
+}
+
+#home-wrapper .content .register-content h1 {
+    color: #ffffff;
+}
+
+.register-input-field {
+    width: 280px;
+    height: 42px;
+    border: none;
+    background-color: #ffcc00;
+    border-radius: 50px;
+    font-family: 'Lucida Grande',Arial,sans-serif;
+    font-size: 26px;
+    font-weight: bold;
+    padding-left: 30px;
+    padding-right: 30px;
+    box-shadow: 0 -1px 1px #B99505; 
+    margin-bottom: 5px;    
+}
+
+input.register-input-field:-webkit-input-placeholder { /* WebKit browsers */
+    color:    #1a1a1a;
+}
+input.register-input-field:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #1a1a1a;
+}
+input.register-input-field:-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #1a1a1a;
+}
+input.register-input-field:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #1a1a1a;
+}
+
+.job-type-button {
+    width: 250px;
+    height: 50px;
+    display: block;
+    color: #FFFFFF;
+    text-align: center;
+    font-family: 'Lucida Grande',Arial,sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 2px solid #1A1A1A;
+    marigin: 0 10px;
+}
+
+#postJob {
+    background: -moz-linear-gradient(center top , #7BD454, #62C831 95%, #53BF29) repeat scroll 0 0 #7BD454;
+    box-shadow: 0 1px 3px rgba(38, 151, 72, 0.5), 0 1px 0 #9FE662 inset;
+    border-top: 1px solid #6DBE38;
+    border-right: 1px solid #509E19;
+    border-left: 1px solid #509E19;
+    border-bottom: 1px solid #198D0F;    
+}
+
+#findJob {
+    background: -moz-linear-gradient(center top , #00AAEC, #00A7EC 95%, #0096E8) repeat scroll 0 0 #00AAEC;
+    box-shadow: 0 1px 3px rgba(15, 59, 141, 0.31), 0 1px 0 #00C1F0 inset;
+    border-top: 1px solid #0A81D4;
+    border-right: 1px solid #007DE8;
+    border-left: 1px solid #007DE8;
+    border-bottom: 1px solid #1D60DD;
+}
+
+.register-not-now {
+    width: 128px;
+    height: 25px;
+    display: block;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    text-align: center;
+    font-family: 'Lucida Grande',Arial,sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 25px;
+    border-radius: 25px;
+    margin-left: 15px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.register-next {
+    width: 128px;
+    height: 25px;
+    display: block;
+    background-color: #a81964;
+    color: #ffffff;
+    text-align: center;
+    font-family: 'Lucida Grande',Arial,sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 25px;
+    border-radius: 25px;
+    margin-left: 10px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+#home-right-wrapper {
+    right: 0;
+    width: 295px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background: #ffcc00;
+    overflow: hidden;
+    height: 100%;
+    border-left: 1px solid #dfb200;
+    padding-top: 30px;
+}
+
+#new-job-board {
+    position: absolute;
+    right: 0;
+    top: 82px;
+    background: url("../images/new-job-board.png") no-repeat scroll 0 0 transparent;
+    width: 132px;
+    height: 147px;
+    display: block;
+}
+
+#home-right-wrapper section {
+    width: 100%;
+    float: left;
+    margin-left: 30px;
+    margin-bottom: 10px;
+}
+
+#home-right-wrapper h1 {
+    font-size: 30px;
+    color: #373737;
+    font-weight: bold;    
+}
+
+.linkedin-account {
+    line-height: 23px;
+    font-size: 18px;
+    cursor: pointer;    
+}
+
+.linkedin-icon {
+    background: url("../images/linkedin-icon.png") no-repeat scroll 0 0 transparent;
+    width: 23px;
+    height: 23px;
+    display: block;
+    margin-right: 10px;
+}
+
+#about-us-wrapper {
+    margin-top: 100px;
+} 
+
+#about-us-wrapper h1 {
+    width: 148px;
+}
+
+ul#user-saying-content {
+    float: left;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+ul#user-saying-content li {
+    margin-bottom: 20px;    
+}
+
+ul#user-saying-content li .user-img {
+    border: 3px solid #FFFFFF;
+    border-radius: 67px 67px 67px 67px;
+    box-shadow: -1px 2px 3px #000000;
+    height: 67px;
+    width: 67px;
+}
+
+ul#user-saying-content li .user-saying-content {
+    width: 180px;
+    margin-left: 5px;
+}
+
+ul#user-saying-content li .user-saying {
+    color: #1a1a1a;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 25px;
+}
+
+ul#user-saying-content li .user-info {
+    text-align: right;
+    color: #ffffff;
+    font-style: italic;
+    font-weight: bold;
+}
+
+
+
+/***************************** home page style end *******************************/   
+
+.job-info-box,
+#all-jobs
+{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.job-info-box
+{
+    width: 690px;
+}
+
+#all-jobs h1
+{
+    color: #414041;
+    line-height: 20px;
+    font: 12px/1.42 'Lucida Grande', Tahoma, sans-serif;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 7px;
+
+}
+
+#all-jobs h1 em
+{
+   font-style: normal;
+}
+
+#all-jobs p.instruction
+{
+    width: 574px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    font-family: 'Lucida Grande', Tahoma, sans-serif;
+    line-height: 19px;
+    font-size: 16px;
+    font-family: Myriad Pro, Calibri, Helvetica, Arial, "Trebuchet MS",Georgia,sans-serif;
+}
+
+#apply-box
+{
+    height: 40px;
+    padding-top: 15px;
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#apply-box button
+{
+    padding: 5px 20px;
+    vertical-align: baseline;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    font-weight: normal;
+    font-size: 16px;
+    cursor: pointer;
+    zoom: 1;
+    display: inline-block;
+    position: relative;
+    text-transform: uppercase;
+    line-height: 22px;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #262626;
+    color: #fff;
+    color: rgb(235, 164, 33);
+    color: #fc0;
+    float: right;
+}
+
+#apply-box .social-icons
+{
+    float: right;
+    height: 20px;
+    margin-right: 10px;
+    margin-top: 8px;
+}
+
+#job-info-wrapper h1.job-title
+{
+    font-size: 25px;
+    color: #333333;
+}
+
+#brief-info
+{
+    margin-top:20px;
+    width:100%;
+    overflow: hidden;
+    background: #fc0;
+    background: #ffe066 ;
+}
+
+#brief-info dl
+{
+    margin: 12px 2px 2px 8px;
+}
+
+#brief-info dt,
+#brief-info dd
+{
+    float: left;
+    margin: 0 1% 6px 0;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#brief-info dt
+{
+    clear: both;
+    width: 25%;
+}
+
+#brief-info dd
+{
+    width: 60%;
+    min-height: 1.4em;
+}
+
+#brief-info dd a,
+#brief-info dd a em
+{
+    font-weight: normal;
+    font-style:normal;
+    text-decoration: none;
+    color: #333333;
+}
+
+#job-description
+{
+    width:100%;
+    margin-top: 20px;
+    padding-bottom: 30px;
+}
+
+#job-description table
+{
+    width: 689px !important;
+}
+
+#job-description div
+{
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+#job-description p
+{
+    margin: 0;
+    margin-top: 25px;
+    font-size: 13px;
+    line-height: 17px;
+}
+
+.sub-headings strong
+{
+    width: 100%;
+    display: block;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.contact
+{
+    font-weight: bold;
+}
+
+#rightBar
+{
+    right: 0;
+    text-align: center;
+    width: 280px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background: #fff;
+    overflow: hidden;
+    -ms-transition: right .3s ease;
+    -webkit-transition: right .3s ease;
+    -moz-transition: right .3s ease;
+    -o-transition: right .3s ease;
+    transition: right .3s ease;
+    z-index: 200;
+    vertical-align: top;
+    height: 100%;
+    border-left: 1px solid #414041;
+    border-left: 1px solid #a3a3a3;
+}
+
+#profile-box
+{
+    height: 385px;
+    background-color: rgb(235, 164, 33);
+    background: #fc0;
+    position:relative;
+}
+
+#profile-box #users-box,
+#profile-box #recruiter-box
+{
+    padding: 10px 10px 0 10px;
+    position:relative;
+    height: 97%;
+}
+
+#profile-box #recruiter-box
+{
+    display: none;
+}
+
+#your_applications
+{
+    height: 100%;
+    background-color: #262626;
+}
+
+#your_applications h1
+{
+    padding: 9px 5px 9px 0px;
+    text-transform: uppercase;
+    text-align: left;
+    color: #ffffff;
+    line-height: 22px;
+    font-size: 12px;
+    padding-left: 10px;
+}
+
+#other-jobs
+{
+    display: block;
+    height: 525px;
+    overflow: auto;
+    background-color: #414041;
+}
+
+#other-jobs .oj-box
+{
+   - height: 75px;
+    display: block;
+    overflow: hidden;
+    text-align: left;
+    padding: 10px 0px 10px 12px;
+}
+
+#other-jobs .even
+{
+    background-color: #414041  ;
+}
+
+#other-jobs .odd
+{
+    background-color: #2e2e2e  ;
+}
+
+
+#other-jobs .oj-box p.title
+{
+    color: #cccccc;
+    line-height: 15px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+}
+
+#other-jobs .oj-box p.title:hover,
+#other-jobs .oj-box p.company:hover
+{
+    text-decoration: underline;
+}
+
+#other-jobs .oj-box p.salary
+{
+    color: #fff;
+    line-height: 14px;
+    font-size: 12px;
+    -font-weight: bold;
+    cursor: pointer;
+    width: 90%;
+    margin-top: 5px;
+}
+
+#other-jobs .oj-box p.location
+{
+    color: #ffe066;
+    line-height: 15px;
+    font-size: 12px;
+    cursor: pointer;
+    margin-top: 5px;
+    width: 90%;
+}
+
+#profile-img,
+#profile-img img
+{
+    display: block;
+    width: 140px;
+    height: 140px;
+    border-radius: 99px;
+}
+
+#profile-img
+{
+    border: 7px solid white;
+    margin: 0px 0 10px 15px;
+}
+
+#profile-info
+{
+    margin-left: 15px;
+}
+
+#profile-info h1
+{
+    color: #414041;
+    font: 12px/1.42 'Lucida Grande', Tahoma, sans-serif;
+    font-size: 1.3em;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 6px;
+}
+
+#profile-info h2
+{
+    text-align: left;
+    margin-bottom: 9px;
+}
+
+#profile-info p.user-location
+{
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+#profile-info p.user-location img
+{
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin-right: 5px;
+}
+
+#profile-info p.user-location span
+{
+    line-height: 22px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#profile-edit
+{
+    height: 35px;
+    width: 100%;
+    position:absolute;
+    bottom:0;
+    display: block;
+}
+
+#profile-edit a
+{
+    font-weight: bold;
+    font-size: 12px;
+    float: right;
+    padding: 2px 20px 0 12px;
+    line-height: 25px;
+    margin-top: 7px;
+    background-color: rgb(235, 164, 33);
+    border-top-left-radius: 2px;
+    border-top: 1px solid #414041;
+    border-left: 1px solid #414041;
+    text-decoration: none !important;
+    color: #333;
+}
+
+#apply
+{
+    -height: 320px;
+    background-color: rgb(235, 164, 33);
+    background: #fc0;
+    position:relative;
+    text-align: left;
+    display: none;
+}
+
+#apply .overlay
+{
+    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.25);
+    background-image: url("../images/sending-loader.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#apply .overlay p
+{
+    font-family: 'Lucida Grande', Tahoma, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    position: absolute;
+    top: 61%;
+    left: 10%;
+}
+
+
+
+#apply h1
+{
+    padding: 9px 5px 9px 0px;
+    text-transform: uppercase;
+    text-align: left;
+    color: #fff;
+    line-height: 22px;
+    font-size: 12px;
+    padding-left: 10px;
+    background-color: #262626;
+}
+
+#apply .application-info
+{
+   padding: 10px;
+}
+
+
+#apply .application-info p.title,
+#apply .application-info p.location,
+#apply .application-info p.salary
+{
+    color: #414041;
+    width: 100%;
+    line-height: 21px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#apply .application-info p.title:hover
+{
+    text-decoration: underline;
+}
+
+#apply .application-info p.location
+{
+    font-size: 15px;
+    color: #333333;
+}
+
+#apply .application-info p.salary
+{
+    color: #333;
+    font-size: 14px;
+}
+
+#apply .application-info p.apply-info
+{
+    line-height: 17px;
+    font-size: 12px;
+    margin-top: 2px;
+    margin-bottom: 5px;
+}
+
+#apply .application-info input
+{
+    font-size: 14px;
+    width: 259px;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+#apply .application-info input[type=file]
+{
+    border: 1px solid gray;
+}
+
+#apply .application-info input[type=submit]
+{
+    border: 1px solid gray;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    line-height: 22px;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #262626;
+    color: #fc0;
+    margin-top: 3px;
+    margin-bottom: 0;
+}
+
+#apply .application-info .mid-box img
+{
+    width: 70px;
+    height: 60px;
+    float: left;
+    margin-right: 5px;
+}
+
+#apply .application-info .mid-box p.thanks
+{
+    padding-bottom: 12px;
+    border-bottom: 1px dotted #414042;
+
+    color: #414041;
+    font: 12px/1.42 'Lucida Grande', Tahoma, sans-serif;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 6px;
+    margin-top: 8px;
+
+}
+
+#apply .application-info .mid-box span
+{
+    color: #333333;
+    font: 12px/1.42 'Lucida Grande', Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+}
+
+#all-jobs
+{
+    padding: 15px;
+    width: 876px;
+    border: 0;
+    overflow: hidden;
+}
+
+
+#all-jobs #all-jobs-left
+{
+    width: 578px;
+    float: left;
+    display: block;
+    border: 1px solid #ffffff;
+
+}
+
+#all-jobs #all-jobs-left td.hidden span
+{
+    display: none;
+}
+
+#all-jobs #all-jobs-right
+{
+    width: 280px;
+    float: left;
+    margin-left: 16px;
+    -border: 1px solid #d5cfcf;
+}
+
+#all-jobs-right p.header
+{
+    text-align: left;
+    margin-bottom: 0px;
+    border-bottom: 1px solid #999;
+    font-weight: bold;
+    padding: 0 0 13px;
+    text-transform: uppercase;
+    font-family: 'Lucida Grande', Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
+    line-height: normal;
+    width: 260px;
+    margin-left: 19px;
+    height: 25px;
+}
+
+#all-jobs-right #sort-box
+{
+    overflow: hidden;
+    -padding: 0px 8px 8px 8px;
+    -border-bottom: 1px solid #d5cfcf;
+    font-family: Verdana,Arial,sans-serif;
+}
+
+h3.filter-by-keyword
+{
+    font-family: Verdana,Arial,sans-serif;
+    margin-top: -10px;
+    padding-left: 2.2em;
+    position: relative;
+    padding: .5em .5em .5em .7em;
+    min-height: 0;
+}
+
+#all-jobs-right #sort-box h3,
+h3.filter-by-keyword
+{
+    color: #666;
+    display: block;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-top: -4px;
+    font-size: 12px;
+    line-height: 22px;
+    cursor: pointer !important;
+    border: 0;
+    margin-left: -9px;
+    background:none !important;
+}
+
+#all-jobs-right #sort-box div
+{
+    border: 0;
+    padding: 0 !important;
+    -height: auto !important;
+}
+
+#all-jobs-right #sort-box div section,
+    #all-jobs-right div input#search-keyword
+{
+    border: 1px solid #e0e4e6;
+    margin-bottom: 5px;
+    color: #414041;
+    line-height: 18px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px;
+    display: block;
+    overflow: hidden;
+    -margin-left: 20px;
+}
+
+#all-jobs-right div input#search-keyword
+{
+    width: 280px;
+    font-weight: normal;
+    margin-left: 0;
+    border: 1px solid rgb(126, 157, 185);
+}
+
+#all-jobs-right #sort-box div section:hover
+{
+    background: #e8f2f8 ;
+}
+
+#all-jobs-right #sort-box div section span
+{
+    display: block;
+    float:left;
+}
+
+#all-jobs-right #sort-box div section span.key
+{
+    width: 80%;
+}
+
+#all-jobs-right #sort-box div section span.value
+{
+    -background-color: #303030;
+    background-color: #d8dfea;;
+    color: #3b5998;
+    min-width: 12%;
+    text-align: center;
+    border-radius: 4px;
+    line-height: 18px;
+    font-size: 11px;
+    float: right;
+}
+
+#all-jobs-right #sort-box p a
+{
+    font-size: 1em;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 15px;
+    text-transform: uppercase;
+    color: #414041;
+    text-decoration: none;
+}
+
+
+
+
+.aj-box
+{
+    border: 1px solid #e0e4e6;
+    width: 550px;
+    overflow: hidden;
+    display: block;
+    padding: 12px;
+    margin-bottom: 15px;
+}
+
+.aj-box:hover
+{
+    background: #e8f2f8 ;
+}
+
+.aj-box .aj-recruiter-image
+{
+    border: 1px solid blue;
+    width:110px;
+    height:110px;
+    float: left;
+}
+
+.aj-box .aj-job-info
+{
+    overflow: hidden;
+    float: left;
+    margin-left: 10px;
+    position: relative;
+}
+
+.aj-box .aj-job-info p.title
+{
+    color: #146BB5;
+    line-height: 24px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.aj-box .aj-job-info p.title:hover,
+.aj-box .aj-job-info p.company .agency:hover
+{
+    text-decoration: underline;
+}
+
+
+.aj-box .aj-job-info p
+{
+    color: #414041;
+    line-height: 18px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.aj-box .aj-job-info span.timestamp
+{
+    color: #808080;
+    font-weight: normal;
+    text-transform: capitalize;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.aj-box .aj-job-info p.aj-job-description
+{
+    color: #333333;
+    line-height: 17px;
+    font-size: 12px;
+    cursor: pointer;
+    margin-top: 2px;
+    margin-bottom: 5px;
+    word-wrap: break-word;
+    font-weight: normal;
+    width: 540px;
+}
+
+.aj-box .aj-job-info p.aj-job-location
+{
+    width: 60%;
+    float: left;
+}
+.aj-box .aj-job-info p.aj-job-salary
+{
+    width: 30%;
+    float: right;
+    text-align: right;
+}
+
+
+.dataTables_filter
+{
+    display: none;
+}
+
+.dataTables_filter input
+{
+    width: 260px;
+    height: 30px;
+    padding: 5px;
+}
+
+tfoot
+{
+    display: none;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.marginL10 {
+    margin-left: 10px;
+}
+
+.marginR10 {
+    margin-right: 10px;
+}
+
+.marginT10 {
+    margin-top: 10px;
+}
+
+.marginB10 {
+    margin-bottom: 10px;
+}
+
+.marginL20 {
+    margin-left: 20px;
+}
+
+.marginR20 {
+    margin-right: 20px;
+}
+
+.marginT20 {
+    margin-top: 20px;
+}
+
+.marginB20 {
+    margin-bottom: 20px;
+}
+
+.paddingL10 {
+    padding-left: 10px;
+}
+
+.paddingR10 {
+    padding-right: 10px;
+}
+
+.paddingT10 {
+    padding-top: 10px;
+}
+
+.paddingB10 {
+    padding-bottom: 10px;
+}
+
+.paddingL20 {
+    padding-left: 20px;
+}
+
+.paddingR20 {
+    padding-right: 20px;
+}
+
+.paddingT20 {
+    padding-top: 20px;
+}
+
+.paddingB20 {
+    padding-bottom: 20px;
+}

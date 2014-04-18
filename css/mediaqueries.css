@@ -1,0 +1,15 @@
+@media screen and (max-width: 1020px)
+{
+    body
+    {
+        overflow-x: auto;
+    }
+}
+
+@media screen and (max-height: 670px)
+{
+    body
+    {
+        overflow-y: auto;
+    }
+}
